@@ -1,0 +1,36 @@
+.sidebar {
+    background-color: black;
+    height: 100vh;
+    padding: 10px;
+    position: fixed;
+    width: 15%;
+    top: 0;
+    left: 0;
+}
+  
+.link {
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+  
+.link:hover {
+    background-color: orange;
+    border-radius: 4px;
+}
+
+.active {
+    background-color: orange;
+    border-radius: 4px;
+}
+
+.logoItem {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+.logo {
+    max-width: 45%;
+    height: auto;
+}

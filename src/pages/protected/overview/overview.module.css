@@ -1,0 +1,137 @@
+.overviewContainer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+  
+.statusCard {
+    display: inline-block;
+    width: 30%;
+    margin-right: 1%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+  
+.statusCard:last-child {
+    margin-right: 0;
+}
+  
+.tableContainer {
+    margin-top: 20px;
+}
+  
+.table {  
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+  
+.table th {
+    background-color: #f4f4f4;
+}
+
+.pendingText {
+    color: orange;
+    text-align: left;
+}
+
+.rejectText {
+    color: red;
+    text-align: left;
+}
+
+.acceptText {
+    color: greenyellow;
+    text-align: left;
+}
+  
+.cardText {
+    color: gray;
+    opacity: 0.4;
+    text-align: left;
+}
+
+.spinner {
+    align-items: center;
+}
+
+.iconButton {
+    background-color: transparent;
+    color: orange;
+    border: none;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.iconButton:hover {
+    opacity: 0.8;
+}
+  
+.icon {
+    margin-right: 5px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.modalHeaderCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: gainsboro;
+    background-color: rgba(220, 220, 220, 0.2);
+}
+
+.modalHeaderCard p {
+    margin: 0;
+    flex: 1 1 30%;
+    box-sizing: border-box;
+}
+
+.modalSeparator {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.modalSeparator p {
+    margin: 0;
+    flex: 1;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.modalTableContainer {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%; /* Make sure it extends to full width */
+}

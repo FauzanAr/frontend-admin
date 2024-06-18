@@ -1,0 +1,28 @@
+.overviewContainer {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    border: none;
+}
+
+.cardHeader {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border: none;
+    background-color: none;
+}
+
+.button {
+    float: left;
+}

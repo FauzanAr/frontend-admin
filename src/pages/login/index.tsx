@@ -1,8 +1,9 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, useEffect } from 'react';
 import { Form, Button, Container, Row, Col, InputGroup, Card, Modal } from 'react-bootstrap';
 import './index.css';
 import { userLogin } from '../../api/user/login';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { localStorageKey } from '../constanta';
 
 export interface FormData {
     corporateId?: string;
@@ -17,6 +18,7 @@ const LoginForm: React.FC = () => {
   const [errorMsg, setErrorMsg] = useState('');
   const [formData, setFormData] = useState<FormData>({});
   const [formError, setFormError] = useState<FormData>({});
+  const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -66,11 +68,18 @@ const LoginForm: React.FC = () => {
         if(response && response.code === 200) {
             setErrorMsg('Berhasil masuk');
             setShowModal(true);
+            localStorage.setItem(localStorageKey.JWT, response.data);
+            navigate('/dashboard/home');
         }
 
         setErrorMsg(response.message || response)
         setShowModal(true);
   }
+
+  useEffect(() => {
+    localStorage.removeItem(localStorageKey.USER_DATA);
+    localStorage.removeItem(localStorageKey.JWT);
+  })
 
   return (
     <Container className="d-flex align-items-center justify-content-center min-vh-100">
