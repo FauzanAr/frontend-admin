@@ -1,6 +1,5 @@
-import React from 'react'
 import { Nav, Image } from 'react-bootstrap';
-import { HouseDoor, CalendarCheck, ClipboardPulse } from 'react-bootstrap-icons';
+import { HouseDoor, ClipboardPulse } from 'react-bootstrap-icons';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './sidebar.module.css';
 

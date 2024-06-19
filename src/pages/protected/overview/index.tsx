@@ -269,7 +269,7 @@ const Overview = () => {
                 </div>
                 <div className={styles.modalSeparator}>
                   <p><strong>Total Transfer Record:</strong> {selectedTransaction.TransactionList?.length}</p>
-                  <p><strong>Total Amount:</strong> Rp {numberFormat(Number(selectedTransaction.totalAmount))}</p>
+                  <p><strong>Total Amount:</strong> {numberFormat(Number(selectedTransaction.totalAmount))}</p>
                   <p><strong>Estimated Service Fee:</strong> Rp 0</p>
                 </div>
                 <div className={styles.modalTableContainer}>
@@ -288,7 +288,7 @@ const Overview = () => {
                       {selectedTransaction.TransactionList?.map((item, index) => (
                         <tr key={item.id}>
                           <td>{index + 1}</td>
-                          <td>{item.userDestinationId}</td>
+                          <td>{item.corporateDestinationId}</td>
                           <td>{item.userDestination.name}</td>
                           <td>{item.corporateDestination.name}</td>
                           <td>{numberFormat(Number(item.amount))}</td>

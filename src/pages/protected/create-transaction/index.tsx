@@ -107,10 +107,13 @@ function CreateTransaction() {
         const result: Response = await createTransaction(transactionData);
         if (result.code === 401) {
             localStorage.removeItem(localStorageKey.JWT)
+            setUser({});
         }
 
         if (!result.success) {
             // Will beauty
+            setShowSuccess(false)
+            setShowConfirmation(false)
             alert(result.message)
             return
         }
