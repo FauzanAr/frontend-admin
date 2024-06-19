@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# Frontend Admin
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application is part of full stack application, you can find the backend service on my github with 'backend-admin' repository. Basically this application is for login, signup, send verification code, and CRUD transactions
 
-Currently, two official plugins are available:
+## Prerequisite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Make sure you have this on your operating system:
 
-## Expanding the ESLint configuration
+- Node.js v18.17
+- Docker
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/FauzanAr/frontend-admin.git
+    cd frontend-admin
+    ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+2. Install dependency (Optional):
+    ```bash
+    npm install
+    # atau
+    yarn install
+    ```
+3. Make sure the backend-admin already running (Required)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Run the application
+
+You can run this application by typing this command inside the project:
+
+```bash
+docker build . -t "frontend-admin:v1.0"
+docker run -p 8080:8080 frontend-admin:v1.0
